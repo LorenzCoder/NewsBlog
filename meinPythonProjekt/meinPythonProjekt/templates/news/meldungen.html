@@ -1,0 +1,35 @@
+{% extends "news/basis.html" %}
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+</head>
+<body>
+<h1>News-$Uuml;bersicht
+{% block titel %}
+News-Übersicht
+{% endblock titel %}
+</h1>
+{% block inhalt %}
+{% for n in object_list %}
+<div class="container">
+<div class="titelzeile">
+<div class="titel">{{ n.titel | escape}}
+</div>
+<div class="zeitstempel">{{ n.zeitstempel }}
+</div>
+</div>
+<div class="text">
+{{ n.meldung|escape|linebreaksbr }}
+<div class="link_unten">
+<a href="{% url 'news:meldung_detail' n.id %}">
+Details
+</a>
+</div>
+</div>
+</div>
+{% endfor %}
+{% endblock inhalt %}
+</body>
+</html>
