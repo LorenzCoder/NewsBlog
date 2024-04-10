@@ -19,21 +19,26 @@ def index(request):
     template = loader.get_template('news/home.html')
     return HttpResponse(template.render())
 
-def login():
-    template = loader.get_template('registration/login.html')
+#def login():
+    #template = loader.get_template('registration/login.html')
     #bitte fertig machen
-def signup():
-    template = loader.get_template('registration/signup.html')
+
+#def signup():
+    #template = loader.get_template('registration/signup.html')
     #bitte fertig machen
-def password_reset_form():
-    template = loader.get_template('registration/password_reset_form.html')
+
+#def password_reset_form():
+    #template = loader.get_template('registration/password_reset_form.html')
     #bitte fertig machen
-def password_reset_done():
-    template = loader.get_template('registration/password_reset_done.html')
+
+#def password_reset_done():
+    #template = loader.get_template('registration/password_reset_done.html')
     #bitte fertig machen
-def password_reset_confirm():
-    template = loader.get_template('registration/password_reset_confirm.html')
+
+#def password_reset_confirm():
+    #template = loader.get_template('registration/password_reset_confirm.html')
     #bitte fertig machen
-def password_reset_complete():
-    template = loader.get_template('registration/password_reset_complete.html')
+
+#def password_reset_complete():
+    #template = loader.get_template('registration/password_reset_complete.html')
     #bitte fertig machen
