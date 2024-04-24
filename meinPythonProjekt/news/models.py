@@ -17,4 +17,5 @@ class Kommentar(models.Model):
     def __unicode__(self):
         return self.titel
 
-#bitte entsprechende Modelklassen für die ViewFunktionen erstellen und mit leben füllen
+class Home(models.Model):
+    pass

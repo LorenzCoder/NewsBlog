@@ -1,1 +1,0 @@
-Diese Website besteht aus Python, HTML, CSS und JavaScript.
