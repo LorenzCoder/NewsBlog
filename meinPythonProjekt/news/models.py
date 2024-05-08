@@ -16,6 +16,3 @@ class Kommentar(models.Model):
     text = models.TextField('Kommentartext')
     def __unicode__(self):
         return self.titel
-
-class Home(models.Model):
-    pass
