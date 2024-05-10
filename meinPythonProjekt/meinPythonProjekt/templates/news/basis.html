@@ -1,20 +1,20 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html>
-<head>
-<title>
-Unsere Django-Seite
-</title>
-</head>
-<body>
-<div id="inhalt">
-<h2>
-{% block titel %}
-Django Website
-{% endblock titel %}
-</h2>
-{% block inhalt %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/base.css'%}">
+        <title>Unsere Django-Seite</title>
+    </head>
+    <body>
+        <div id="inhalt">
+            <h2>
+                {% block titel %}
+                    Django Website
+                {% endblock %}
+            </h2>
+            {% block inhalt %}
 
-{% endblock %}
-</div>
-</body>
+            {% endblock %}
+        </div>
+    </body>
 </html>

@@ -30,7 +30,6 @@ def index(request):
 
 
 def signup(request):
-    template = loader.get_template('registration/signup.html')
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
@@ -39,4 +38,4 @@ def signup(request):
             return redirect('home')
     else:
         form = SignupForm()
-    return render(request, template, {'form': form})
+        return render(request, 'registration/signup.html', {'form': form})
