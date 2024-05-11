@@ -1,3 +1,4 @@
 meinPythonProjekt/meinPythonProjekt/__pycache__/*
 meinPythonProjekt/db.sqlite3
 meinPythonProjekt/news/migrations/__pycache__/*
+meinPythonProjekt/news/__pycache__/*
