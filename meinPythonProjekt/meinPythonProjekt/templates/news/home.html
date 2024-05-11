@@ -9,6 +9,7 @@
   {% csrf_token %}
   <button type="submit">Log Out</button>
 </form>
+<a href="{% url 'news:meldungen' %}">Zu den Meldungen</a>
 {% else %}
 <p>You are not logged in</p>
 <div class="FlexContainer">

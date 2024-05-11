@@ -3,6 +3,7 @@
 News-Übersicht
 {% endblock %}
 {% block inhalt %}
+{% if user.is_authenticated %}
 {% for n in object_list %}
 <div class="container">
     <div class="titelzeile">
@@ -21,5 +22,11 @@ News-Übersicht
         </div>
     </div>
 </div>
+{% else %}
+<p>
+Tut uns leid, aber du musst dich <a href="{% url 'login' %}">hier einloggen</a>
+oder dich <a href="{% url 'news:signup' %}">hier registrieren</a>
+</p>
 {% endfor %}
+{% endif %}
 {% endblock %}
