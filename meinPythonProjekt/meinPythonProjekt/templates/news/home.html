@@ -11,8 +11,10 @@
 </form>
 {% else %}
 <p>You are not logged in</p>
-<p><a href="{% url 'password_reset' %}">Password Reset</a></p>
-<p><a href="{% url 'login' %}">Log In</a></p>
-<p><a href="{% url 'news:signup' %}">Sign up</a></p>
+<div class="FlexContainer">
+  <a href="{% url 'password_reset' %}" class="nichtEingeloggtLinks">Password Reset</a>
+  <a href="{% url 'login' %}" class="nichtEingeloggtLinks">Log In</a>
+  <a href="{% url 'news:signup' %}" class="nichtEingeloggtLinks">Sign up</a>
+</div>
 {% endif %}
 {% endblock %}

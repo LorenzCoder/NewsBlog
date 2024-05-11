@@ -1,3 +1,2 @@
-Das ist eine Website mit Django und Python.
-Ich bin froh um jede Hilfe von euch.
-Danke
+# Welcome to NewsBlog!
+## Fill in the blanks...

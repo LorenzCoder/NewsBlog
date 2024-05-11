@@ -1,5 +1,5 @@
 html {
-    /* background-image: url('images/backgroundImage.jpg'); */
+    /* background-image: url('news/images/backgroundImage.jpg'); */
     background-color: #000000;
     color: #ffffff;
 }
@@ -10,4 +10,16 @@ a {
 a:hover {
     color: #ff0000;
     background-color: #00008b;
+}
+.FlexContainer {
+    display: flex;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+}
+.nichtEingeloggtLinks {
+    background-color: #dddddd;
+    color: #000000;
+    margin: 5px;
+    padding: 10px;
 }
