@@ -1,8 +1,9 @@
 {% extends "news/basis.html" %}
+{% block inhalt %}
+{% if user.is_authenticated %}
 {% block titel %}
 News-Details für Eintrag {{ meldung.id}}
 {% endblock %}
-{% block inhalt %}
 <div class="container">
     <div class="titelzeile">
         <div class="titel">
@@ -40,7 +41,16 @@ News-Details für Eintrag {{ meldung.id}}
 <br>
 <div class="link_unten">
     <a href="../">
-        Zurück
+        Zurück zur Meldungsübersicht
     </a>
 </div>
+{% else %}
+<p>
+Tut uns leid, dass du dir die Meldung nicht genauer ansehen kannst,
+aber du musst dich fürs ansehen der Meldung <a href="{% url 'login' %}">hier einloggen</a>
+oder dich <a href="{% url 'news:signup' %}">hier registrieren</a> um die Meldungsdetails zu sehen.
+<br>
+<a href="/">Hier</a> gehts zu Startseite.
+</p>
+{% endif %}
 {% endblock %}
