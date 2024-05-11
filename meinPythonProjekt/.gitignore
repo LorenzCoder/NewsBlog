@@ -1,8 +1,5 @@
-news/__pycache__/*
-meinPythonProjekt/__pycache/*
 .idea/
 .idea/NewsBlog.iml
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-db.sqlite3
