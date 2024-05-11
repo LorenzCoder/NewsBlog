@@ -1,3 +1,4 @@
 news/__pycache__/*
 meinPythonProjekt/__pycache/*
 .idea/
+db.sqlite3
