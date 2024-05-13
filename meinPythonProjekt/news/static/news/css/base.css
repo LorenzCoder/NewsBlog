@@ -1,5 +1,5 @@
-html {
-    /* background-image: url('news/images/backgroundImage.jpg'); */
+html, body {
+    /* background-image: url('/static/news/images/backgroundImage.jpg'); */
     background-color: #000000;
     color: #ffffff;
 }
