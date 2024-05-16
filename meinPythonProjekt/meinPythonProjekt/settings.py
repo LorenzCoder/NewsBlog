@@ -123,13 +123,4 @@ LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-AUTHENTICATION_BACKENDS = (
-    'oauth2_provider.backends.OAuth2Backend',
-    'django.contrib.auth.backends.ModelBackend',
-)
-
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
-SOCIAL_AUTH_AUTHENTICATION_BACKENDS = (
-    'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.facebook.FacebookOAuth2',
-)
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
