@@ -33,8 +33,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news',
-    'oauth2_provider',
-    # 'social_django',
 ]
 
 # APPEND_SLASH = False
