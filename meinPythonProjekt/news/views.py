@@ -4,7 +4,6 @@ from django.template import loader, Context
 from django.http import HttpRequest, HttpResponse
 from .models import Meldung, Kommentar
 from django.views.generic import TemplateView
-from .forms import SignupForm
 
 # Create your views here.
 
