@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.template import loader, Context
 from django.http import HttpRequest, HttpResponse
 from .models import Meldung, Kommentar
 from django.views.generic import TemplateView
+from .forms import LoginForm, PasswordResetForm
 
 # Create your views here.
 
@@ -38,3 +39,24 @@ def signup(request):
     else:
         form = SignupForm()
         return render(request, 'registration/signup.html', {'form': form})
+
+def login(request):
+    form = LoginForm(request.POST or None)
+    if form.is_valid():
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        user = authenticate(request=self.request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('/')
+        else:
+            messages.error(request, 'Ungültiger Benutzername oder Password')
+    return render(request, 'registration/login.html', {'form': form})
+
+def password_reset(request):
+    form = PasswordResetForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        messages.succes(request, 'Eine E-mail fürs zurücksetzen des Passwortes wurde gesendet')
+        return redirect('/')
+    return render(request, 'registration/password_reset_done.html', {'form': form})

@@ -1,13 +1,18 @@
 {% extends "news/basis.html" %}
 
 {% block titel %}Sign Up{% endblock %}
+{% block links %}
+Hier ein paar Links.
+<div class="FlexContainer">
+  <a href="{% url 'password_reset' %}" class="nichtEingeloggtLinks">Password Reset</a>
+  <a href="{% url 'login' %}" class="nichtEingeloggtLinks">Login</a>
+  <a href="/" class="nichtEingeloggtLinks">Zurück zur Startseite</a>
+</div>
+{% endblock %}
 
 {% block inhalt %}
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
   <button type="submit">Sign Up</button>
 </form>
-<br>
-<a href="../">Zurück zur Startseite</a>
 {% endblock %}
