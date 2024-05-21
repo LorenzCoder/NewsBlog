@@ -1,0 +1,46 @@
+{% extends "news/basis.html" %}
+{% block inhalt %}
+{% block titel %}
+News-Details für Eintrag {{ meldung.id}}
+{% endblock %}
+<div class="container">
+    <div class="titelzeile">
+        <div class="titel">
+            {{ meldung.titel | escape}}
+        </div>
+        <div class="zeitstempel">
+            {{ meldung.zeitstempel }}
+        </div>
+    </div>
+    <div class="text">
+        {{ meldung.text|escape|linebreaksbr }}
+    </div>
+</div>
+<div class="container">
+    <div class="titelzeile">
+        Kommentare
+    </div>
+    {% if meldung.kommentar_set.count %}
+    <table>
+        {% for k in meldung.kommentar_set.all  %}
+        <tr class="kommentarzeile">
+            <td class="spaltenbezeichner">
+                {{ k.autor }}:
+            </td>
+            <td>
+                {{ k.text|escape|linebreaksbr }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    Keine Kommentare
+    {% endif %}
+</div>
+<br>
+<div class="link_unten">
+    <a href="../">
+        Zurück zur Meldungsübersicht
+    </a>
+</div>
+{% endblock %}

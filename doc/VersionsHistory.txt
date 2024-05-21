@@ -1,0 +1,5 @@
+1.4.0,
+21.05.2024:
+Ordnerstruktur mit den Ordnern '/doc/' und '/software/' erstellt.
+Alles außer die .git Datei in den '/software/' Ordner verschoben und im '/doc/' Ordner diese Datei und eine 'documentation.txt' Datei erstellt.
+LorenzCoder
