@@ -3,3 +3,8 @@
 Ordnerstruktur mit den Ordnern '/doc/' und '/software/' erstellt.
 Alles außer die .git Datei in den '/software/' Ordner verschoben und im '/doc/' Ordner diese Datei und eine 'documentation.txt' Datei erstellt.
 LorenzCoder
+
+1.4.1,
+21.05.2024:
+Die README.md Datei wurde wieder aus dem software Ordner herausbefördert.
+LorenzCoder
