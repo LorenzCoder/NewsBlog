@@ -4,7 +4,7 @@ from django.template import loader, Context
 from django.http import HttpRequest, HttpResponse
 from .models import Meldung, Kommentar
 from django.views.generic import TemplateView
-from .forms import LoginForm, PasswordResetForm
+from .forms import LoginForm, LoginForm
 
 # Create your views here.
 
@@ -27,3 +27,15 @@ def index(request):
         'request': request,
     }
     return HttpResponse(template.render(context))
+
+
+# def signup(request):
+#     if request.method == 'POST':
+#         form = SignupForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)
+#             return redirect('home')
+#     else:
+#         form = SignupForm()
+#         return render(request, 'registration/signup.html', {'form': form})
