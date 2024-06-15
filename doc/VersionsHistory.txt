@@ -8,3 +8,8 @@ LorenzCoder
 21.05.2024:
 Die README.md Datei wurde wieder aus dem software Ordner herausbefördert.
 LorenzCoder
+
+1.5.0,
+15.06.2024:
+Es wurde was geändert.
+LorenzCoder
