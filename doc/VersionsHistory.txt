@@ -18,3 +18,8 @@ LorenzCoder
 25.08.2024:
 Es wurden Ordner umbenannnt.
 LorenzCoder
+
+1.6.1,
+25.08.2024:
+Ordner wurden wieder zurückbenannt.
+LorenzCoder
