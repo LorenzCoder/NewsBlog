@@ -1,2 +1,2 @@
 # Welcome to NewsBlog!
-## Fill in the blanks...
+## It's a Blogwebsite
